@@ -1,0 +1,44 @@
+{% extends 'dummy.html' %}
+
+{% block title %}
+<title>Insert</title>
+{% endblock %}
+
+{% block body_block %}
+<style>
+
+    h5
+    {
+        background-color: #fa4949;
+        display: inline !important;
+        box-shadow: 0px 0px 10px black !important;
+        border-radius: 0px 10px 0px 10px !important;
+        padding: 5px !important;
+        
+
+        
+    }
+    
+    span
+    {
+        margin-top: 50px!important;
+        margin-left: 30px !important;
+        box-shadow: 0px 0px 10px black !important;
+    }
+</style>
+
+<br> <br>
+
+    {% for i in data %}
+    <span>
+    <div class="card" style="width: 18rem;">
+        <img src="{{i.cimage}}" class="card-img-top" alt="..." width="300px height = 300px">
+        <div class="cdard-body">
+          <h5 class="card-title" ><a href="{{i.cname}}">{{i.cname}}</a></h5>
+          <p class="card-text">{{i.flavour}}</p>
+         
+        </div>
+      </div>
+    </span>
+    {% endfor %}
+  {% endblock %}
